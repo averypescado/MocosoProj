@@ -9,7 +9,6 @@ export default function Video({link, title, anchor, passedDowntwo, bgcolor}) {
                 <div>
                     <iframe class="iframe" src={link} width="90%" height="700" frameborder="0"></iframe>
                 </div>
-                <button>Extras</button>
             </div>
         </div>
     )
