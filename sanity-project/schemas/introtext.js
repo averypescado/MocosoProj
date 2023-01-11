@@ -7,6 +7,12 @@ export default {
         name: 'content',
         type: 'string',
         title: 'Content'
+      },
+      {
+        name: 'lang',
+        type: 'string',
+        title: 'Lang'
       }
+
     ]
 }

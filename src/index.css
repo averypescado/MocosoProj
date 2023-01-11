@@ -5,7 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f3f1ed
+  background-color: #f3f1ed;
+  
+  
 }
 
 code {
@@ -31,11 +33,38 @@ code {
 }
 
 .menu-item{
-  width:100%;
   display:flex;
   justify-content: space-between;
-  margin-right:16px;
   margin-bottom:8px;
+  
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 8px;
+  padding-right:8px;
+  border-radius:16px;
+  color: black;
+}
+  /* background-color: white; */
+
+
+  /* From https://css.glass */
+
+.glassy{
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  transition: 0.3s;
+}
+
+a {
+  text-decoration:none;
+  color:rgba(184,148,95);
+}
+
+.menu-item:hover{
+  background-color: rgba(243,236,220,.8);
+
 }
   
 
@@ -44,9 +73,9 @@ code {
   width:320px;
   font-family: Helvetica;
   font-size:16px;
-  padding-left:24px;
   
   padding-top:8px;
+  
 }
 
 .container {
@@ -54,9 +83,9 @@ code {
   top:5px;
   display: inline-block;
   align-self: flex-start;
-  border-right:solid 1px black;
   height:100vh;
   padding-right:16px;
+  padding-left:16px;
 }
 
 .content {
@@ -99,14 +128,34 @@ button{
   padding-bottom:140px;
 }
 
-@media (max-width: 966px) {
-  .container {
-      display: none;
-  }
+.language{
+  border-radius:200px;
+  border: 1px solid black;
+  padding:16px;
+  margin:0px;
+  margin-right:16px;
+}
 
-  iframe {
-    height:300px;
-  }
+.language:hover{
+  background-color:antiquewhite;
+}
+
+.info{
+  position:fixed;
+  right:16px;
+  top:16px;
+  border-radius:16px;
+  width:400px;
+  padding:16px;
+
+
+}
+
+.headshot{
+  width:100%;
+  border-radius:32px;
+  filter: sepia(75%)
+
 }
 
 .toggle{
@@ -115,9 +164,9 @@ button{
 }
 
 .year{
-  border:1px solid black;
+  border:1px solid rgba(184,148,95);
   border-radius:200px;
-  padding:2px 4px;
+  padding:4px 8px;
   width:36px;
   height:16px;
 }
@@ -125,3 +174,32 @@ button{
 #description {
   width:50%;
 }
+
+@media (max-width: 966px) {
+  .container {
+      display: none;
+  }
+
+  iframe {
+    height:300px;
+  }
+
+  #description {
+    width:100%;
+  }
+  #name{
+    font-size:72px;
+  }
+  .title{
+    font-size:36px;
+  }
+
+  .content{
+    margin-left:0px;
+  }
+
+  .proj{
+    padding-bottom:0px;
+  }
+}
+

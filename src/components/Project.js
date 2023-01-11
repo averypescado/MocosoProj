@@ -1,14 +1,18 @@
-export default function Project({title, anchor,year, category}) {
+export default function Project({title, anchor,year, category, background}) {
+
+    
 
     return (
-        <div className="menu-item">
-            <div>
-                <a href={"#"+anchor}>&#8212; {title} </a>
+        
+        <a href={"#"+anchor}>
+            <div className="menu-item glassy">
+                <div>
+                    &#8212; {title}
+                </div>
+                <div className="year">
+                    {year}
+                </div>  
             </div>
-            <div className="year">
-                {year}
-            </div>
-            
-        </div>
+        </a>
     )
 }
