@@ -38,13 +38,10 @@ function handleClick({onChange}) {
                 </div>
                     {toggle ? (
                     <div className="menu">
-                        
-                        Music Videos // Videoclips
-                            {/* {projectsData && projectsData.map((project, index) =>( <Project title={project.title} anchor={project.anchor} year={project.year} category={project.category} />))} */}
+                        <div className="sec">Music Videos // Videoclips</div>
                             {projectsData && projectsData.filter(proj=>proj.category.toLowerCase().includes('clips')).sort((a, b) => (a.order > b.order ? 1 : -1)).map((project, index) =>( <Project title={project.title} anchor={project.anchor} year={project.year} background={poop} />))}
-                        Short Films // Cortometrajes
+                        <div className="sec">Short Films // Cortometrajes</div>
                             {projectsData && projectsData.filter(proj=>proj.category.toLowerCase().includes('film')).sort((a, b) => (a.order > b.order ? 1 : -1)).map((project, index) =>( <Project title={project.title} anchor={project.anchor} year={project.year}/>))}
-
                     </div>
                     ) : null}
                     <div>

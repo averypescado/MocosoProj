@@ -39,11 +39,13 @@ export default function Intro() {
                 
             </div>
 
-            <button onClick={turnSpanish} className="language">
+            <button onClick={turnSpanish} className = {(introduc && introduc[0].lang=="ESP") ? "selected" : 
+            "unselected" }>
                 ESP
             </button>
 
-            <button onClick={turnEnglish} className="language">
+            <button onClick={turnEnglish} className = {(introduc && introduc[0].lang=="ENG") ? "selected" : 
+            "unselected" }>
                 ENG
             </button>
 

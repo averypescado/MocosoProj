@@ -10,10 +10,14 @@ body {
   
 }
 
+html {
+  scroll-behavior: smooth;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 
 #name{
   font-family: Helvetica;
@@ -25,6 +29,7 @@ code {
 
 #intro{
     border-bottom: solid black 1px;
+    height:400px;
 }
 
 .pad{
@@ -75,6 +80,7 @@ a {
   font-size:16px;
   
   padding-top:8px;
+  
   
 }
 
@@ -128,17 +134,34 @@ button{
   padding-bottom:140px;
 }
 
-.language{
+.selected{
   border-radius:200px;
   border: 1px solid black;
   padding:16px;
   margin:0px;
   margin-right:16px;
+  text-align:center;
+  width:240px;
+  transition: 0.3s;
 }
 
-.language:hover{
-  background-color:antiquewhite;
+.unselected{
+  border-radius:200px;
+  border: 1px solid black;
+  padding:16px;
+  margin:0px;
+  margin-right:16px;
+  transition: 0.3s;
 }
+
+.unselected:hover{
+  background-color:antiquewhite;
+  border-color:antiquewhite;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+
 
 .info{
   position:fixed;
@@ -160,11 +183,11 @@ button{
 
 .toggle{
   text-align:right;
-  padding:16px;
+  padding:16px 16px 0px 16px;
 }
 
 .year{
-  border:1px solid rgba(184,148,95);
+  border:1px solid black;
   border-radius:200px;
   padding:4px 8px;
   width:36px;
@@ -173,6 +196,33 @@ button{
 
 #description {
   width:50%;
+}
+
+.sec{
+  padding-bottom:16px;
+  padding-top:32px;
+}
+
+.loader{
+  background-image: url("https://d2w9rnfcy7mm78.cloudfront.net/5634096/original_325e65711b64c35f28bcb5b7d5ca6a06.gif?1575333792?bc=0");
+  height: 100vh;
+  text-align:center;
+
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  vertical-align: middle;
+}
+
+.loader h2{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size:96px;
+  color:yellow;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 @media (max-width: 966px) {
