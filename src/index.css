@@ -34,7 +34,7 @@ code {
 
 #intro{
     border-bottom: solid black 1px;
-    height:400px;
+    padding-bottom:24px;
 }
 
 .pad{
@@ -65,6 +65,14 @@ code {
   backdrop-filter: blur(5.5px);
   -webkit-backdrop-filter: blur(5.5px);
   transition: 0.3s;
+}
+
+.moreglassy{
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11.6px);
+  -webkit-backdrop-filter: blur(11.6px);
 }
 
 a {
@@ -180,9 +188,11 @@ button{
 }
 
 .headshot{
-  width:100%;
+  width:75%;
   border-radius:32px;
-  filter: sepia(75%)
+  filter: sepia(75%);
+  display:block;
+  margin-bottom:16px;
 
 }
 
@@ -233,6 +243,35 @@ button{
 
 .word {
   height:120px;
+}
+
+.footer {
+  background-color: #f3f1ed;
+  width:100;
+  display:flex;
+  justify-content:space-between;
+  padding-top:16px;
+  padding-bottom:16px;
+  padding-left:16px;
+  padding-right:16px;
+  vertical-align: middle;
+  line-height:24px;
+  align-items: center;
+  
+}
+
+.icons {
+  display:flex;
+  align-items:center;
+}
+
+.footlogo{
+  height:64px;
+}
+
+.smallfootlogo{
+  height:24px;
+  margin-left:16px;
 }
 
 @media (max-width: 966px) {

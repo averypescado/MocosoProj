@@ -27,9 +27,6 @@ export default function Projects({passedDownone, poop}) {
 function handleClick({onChange}) {
     setToggle(!toggle);
   }
-
-  console.log(poop+ "is the thing")
-//   passedDownone()
     return (
         <div className="flex">
             <div class="container" style={{width:{}}}>
@@ -49,7 +46,6 @@ function handleClick({onChange}) {
 
                     </div>
 
-                
             </div>
 
             <div className="content">

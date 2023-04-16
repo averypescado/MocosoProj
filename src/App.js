@@ -5,6 +5,7 @@ import Info from './components/Info.js'
 import Projects from './components/Projects.js'
 import Project from './components/Project.js'
 import Loader from './components/Loader.js'
+import Footer from './components/Footer.js'
 import React, { useState, useEffect } from "react"
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCheckSquare, faCoffee, faArrowRight, faArrowLeft, faInfo} from '@fortawesome/free-solid-svg-icons'
@@ -40,6 +41,7 @@ function App() {
       <Info />
       <Intro />
       <Projects passedDownone={changeBackground} poop={bgcolor}/>
+      <Footer />
     </div>
   );
 }
