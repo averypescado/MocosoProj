@@ -21,10 +21,15 @@ code {
 
 #name{
   font-family: Helvetica;
-  font-size:150px;
+  font-size:120px;
   font-weight:bold;
-  padding-bottom:24px;
+  transition:.2s;
+  
+}
 
+#name:hover {
+  text-shadow: #FC0 18px;
+  transition:.2s;
 }
 
 #intro{
@@ -223,6 +228,11 @@ button{
   font-size:96px;
   color:yellow;
   font-family: 'Times New Roman', Times, serif;
+  font-weight:light;
+}
+
+.word {
+  height:120px;
 }
 
 @media (max-width: 966px) {

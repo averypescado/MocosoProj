@@ -35,9 +35,10 @@ export default function Intro() {
     return (
         <div id='intro' class="pad">
             <div id='name' >
-                MO&copy;OSO
+                <img src="wordmark.svg" className="word"/>
                 
             </div>
+
 
             <button onClick={turnSpanish} className = {(introduc && introduc[0].lang=="ESP") ? "selected" : 
             "unselected" }>
