@@ -33,7 +33,7 @@ export default function Intro() {
     }
 
     return (
-        <div id='intro' class="pad">
+        <div id='intro' className="pad">
             <div id='name' >
                 <img src="wordmark.svg" className="word"/>
                 

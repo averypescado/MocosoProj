@@ -28,9 +28,12 @@ export default {
         type: 'string',
         title: 'Category',
         options: {
-          list: ['Short films / Cortometrajes', 'Music Videos / Videoclips']
-        }
-      },
+          list: [
+            { title: 'Reel', value: 'Reel' },
+            { title: 'Short films / Cortometrajes', value: 'Short films / Cortometrajes' },
+            { title: 'Music Videos / Videoclips', value: 'Music Videos / Videoclips' },
+            { title: 'Ads / Comerciales', value: 'Ads / Comerciales' },      ]
+      }},
       {
         name: 'bgcolor',
         type: 'string',

@@ -43,16 +43,28 @@ code {
 }
 
 .menu-item{
-  display:flex;
+  display: flex;
   justify-content: space-between;
-  margin-bottom:8px;
-  
+  align-items: center;     /* Add this to vertically center content */
+  margin-bottom: 8px;
   padding-top: 16px;
   padding-bottom: 16px;
   padding-left: 8px;
-  padding-right:8px;
-  border-radius:16px;
+  padding-right: 8px;
+  border-radius: 16px;
   color: black;
+}
+
+.year{
+  border: 1px solid black;
+  border-radius: 200px;
+  padding: 4px 8px;
+  width: 36px;
+  height: 16px;
+  display: flex;           /* Make year a flex container */
+  align-items: center;     /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+  font-size: 12px;         /* Optional: slightly smaller font for better fit */
 }
   /* background-color: white; */
 
@@ -86,27 +98,34 @@ a {
 }
   
 
-.menu {
-  height: 100vh;
-  width:320px;
-  font-family: Helvetica;
-  font-size:16px;
-  
-  padding-top:8px;
-  
-  
-}
+
+
+
+
 
 .container {
   position: sticky;
-  top:5px;
+  top: 5px;
   display: inline-block;
   align-self: flex-start;
-  height:100vh;
-  padding-right:16px;
-  padding-left:16px;
+  max-height: calc(100vh - 10px);  /* Max height accounting for top position */
+  width: 352px;            /* Fixed width: 320px menu + 32px padding */
+  min-width: 352px;        /* Prevent shrinking */
+  flex-shrink: 0;          /* Don't shrink in flex layout */
+  padding-right: 16px;
+  padding-left: 16px;
+  overflow-y: auto;        /* Only vertical scrolling */
+  overflow-x: hidden;      /* Hide horizontal scrollbar */
 }
 
+.menu {
+  height: auto;            /* Let content determine height */
+  min-height: 100vh;       /* Minimum height to fill viewport */
+  width: 320px;
+  font-family: Helvetica;
+  font-size: 16px;
+  padding-top: 8px;
+}
 .content {
   margin-left:40px;
   display: flex;
