@@ -195,16 +195,50 @@ button{
 
 
 
-.info{
-  position:fixed;
-  right:16px;
-  top:16px;
-  border-radius:16px;
-  width:400px;
-  padding:16px;
-  padding-bottom:24px;
+.info {
+  position: fixed;
+  right: 16px;
+  top: 16px;
+  border-radius: 16px;
+  max-width: 52px;
+  padding: 16px;
+  padding-bottom: 24px;
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    max-width 250ms cubic-bezier(0.215, 0.61, 0.355, 1),
+    background 200ms ease,
+    backdrop-filter 200ms ease,
+    -webkit-backdrop-filter 200ms ease;
+}
 
+.info--open {
+  max-width: 400px;
+  cursor: default;
+}
 
+.info__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    max-height 250ms cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 180ms ease-out 80ms,
+    transform 180ms ease-out 80ms;
+}
+
+.info--open .info__content {
+  max-height: 600px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .info,
+  .info__content {
+    transition: none;
+  }
 }
 
 .headshot{

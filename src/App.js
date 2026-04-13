@@ -12,9 +12,6 @@ import { faCheckSquare, faCoffee, faArrowRight, faArrowLeft, faInfo} from '@fort
 
 library.add(faCheckSquare, faCoffee, faArrowRight, faArrowLeft, faInfo)
 
-
-
-
 function App() {
   const [bgcolor, setBgcolor]= useState(null)
   const [loading,setLoading] =useState(true)
