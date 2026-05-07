@@ -35,13 +35,13 @@ function handleClick({onChange}) {
                 </div>
                     {toggle ? (
                     <div className="menu">
-                        {projectsData && projectsData.filter(proj=>proj.category.toLowerCase().includes('reel')).sort((a, b) => (a.order > b.order ? 1 : -1)).map((project, index) =>( <Project key={index} title={project.title} anchor={project.anchor} year={project.year} background={poop}/>))}
+                        {projectsData && projectsData.filter(proj=>proj.category?.toLowerCase().includes('reel')).sort((a, b) => (a.order > b.order ? 1 : -1)).map((project, index) =>( <Project key={index} title={project.title} anchor={project.anchor} year={project.year} background={poop}/>))}
                         <div className="sec">Ads // comerciales</div>
-                            {projectsData && projectsData.filter(proj=>proj.category.toLowerCase().includes('ads')).sort((a, b) => (a.order > b.order ? 1 : -1)).map((project, index) =>( <Project key={index} title={project.title} anchor={project.anchor} year={project.year} background={poop}/>))}
+                            {projectsData && projectsData.filter(proj=>proj.category?.toLowerCase().includes('ads')).sort((a, b) => (a.order > b.order ? 1 : -1)).map((project, index) =>( <Project key={index} title={project.title} anchor={project.anchor} year={project.year} background={poop}/>))}
                         <div className="sec">Music Videos // Videoclips</div>
-                            {projectsData && projectsData.filter(proj=>proj.category.toLowerCase().includes('clips')).sort((a, b) => (a.order > b.order ? 1 : -1)).map((project, index) =>( <Project title={project.title} anchor={project.anchor} year={project.year} background={poop} />))}
+                            {projectsData && projectsData.filter(proj=>proj.category?.toLowerCase().includes('clips')).sort((a, b) => (a.order > b.order ? 1 : -1)).map((project, index) =>( <Project title={project.title} anchor={project.anchor} year={project.year} background={poop} />))}
                         <div className="sec">Short Films // Cortometrajes</div>
-                            {projectsData && projectsData.filter(proj=>proj.category.toLowerCase().includes('film')).sort((a, b) => (a.order > b.order ? 1 : -1)).map((project, index) =>( <Project title={project.title} anchor={project.anchor} year={project.year}/>))}
+                            {projectsData && projectsData.filter(proj=>proj.category?.toLowerCase().includes('film')).sort((a, b) => (a.order > b.order ? 1 : -1)).map((project, index) =>( <Project title={project.title} anchor={project.anchor} year={project.year}/>))}
                     </div>
                     ) : null}
                     <div>
