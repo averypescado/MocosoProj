@@ -44,7 +44,7 @@ function handleClick({onChange}) {
                     </div>
             </div>
 
-            <div className={`content${toggle ? '' : ' content--expanded'}`}
+            <div className={`content${toggle ? '' : ' content--expanded'}`}>
                 <div className="option">
                     {projectsData && projectsData
                         .sort((a, b) => (a.order > b.order ? 1 : -1))
