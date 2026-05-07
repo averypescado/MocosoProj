@@ -1,13 +1,11 @@
+@import url('https://api.fontshare.com/v2/css?f[]=apfel-grotezk@400,700&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Apfel Grotezk', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f3f1ed;
-  
-  
 }
 
 html {
@@ -20,11 +18,10 @@ code {
 
 
 #name{
-  font-family: Helvetica;
+  font-family: 'Apfel Grotezk', sans-serif;
   font-size:120px;
   font-weight:bold;
   transition:.2s;
-  
 }
 
 #name:hover {
@@ -108,31 +105,54 @@ a {
   top: 5px;
   display: inline-block;
   align-self: flex-start;
-  max-height: calc(100vh - 10px);  /* Max height accounting for top position */
-  width: 352px;            /* Fixed width: 320px menu + 32px padding */
-  min-width: 352px;        /* Prevent shrinking */
-  flex-shrink: 0;          /* Don't shrink in flex layout */
+  max-height: calc(100vh - 10px);
+  width: 352px;
+  min-width: 352px;
+  flex-shrink: 0;
   padding-right: 16px;
   padding-left: 16px;
-  overflow-y: auto;        /* Only vertical scrolling */
-  overflow-x: hidden;      /* Hide horizontal scrollbar */
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              min-width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              padding 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container--collapsed {
+  width: 48px;
+  min-width: 48px;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .menu {
-  height: auto;            /* Let content determine height */
-  min-height: 100vh;       /* Minimum height to fill viewport */
+  height: auto;
+  min-height: 100vh;
   width: 320px;
-  font-family: Helvetica;
+  font-family: 'Apfel Grotezk', sans-serif;
   font-size: 16px;
   padding-top: 8px;
+  opacity: 1;
+  transition: opacity 0.2s ease;
 }
+
+.menu--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .content {
-  margin-left:40px;
+  margin-left: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width:100%;
-  
+  flex: 1;
+  min-width: 0;
+  transition: margin-left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.content--expanded {
+  margin-left: 16px;
 }
 
 .flex {

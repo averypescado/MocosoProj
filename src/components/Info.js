@@ -20,9 +20,10 @@ export default function Info() {
                 <h1>Patricio Trejo-Lerdo</h1>
                 <p>hi@mocoso.co</p>
                 <img className="headshot" src="https://yt3.ggpht.com/ytc/AMLnZu8AbPT987abAUHY43z7m-nMqydLXaiOSNG0cUxUpw=s900-c-k-c0x00ffffff-no-rj" alt="Patricio Trejo-Lerdo" />
-                Guided through life by inspiration, my work is an ongoing search for new experiences and challenges. For the last 7 years, I've worked and learned from the audiovisual world, working freelance with small production companies as well as larger ad agencies.
+                With 8+ years of film and commercial practice in productions of all sizes, I consider my work an ongoing search for new challenges and experiences.
                 <br /><br />
-                I'm currently living in San Francisco.
+                Bilingual — Based in the San Francisco Bay Area<br />
+                Open to working anywhere.
             </div>
         </div>
     )
